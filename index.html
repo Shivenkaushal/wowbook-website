@@ -1,0 +1,310 @@
+<!doctype html>
+
+<!-- paulirish.com/2008/conditional-stylesheets-vs-css-hacks-answer-neither/ -->
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!-->
+<html lang="en" class="no-js">
+<!--<![endif]-->
+
+<head>
+    <script>(function (H) { H.className = H.className.replace(/\bno-js\b/, 'js') })(document.documentElement)</script>
+    <meta charset="utf-8">
+    <style>
+        .js #features {
+            margin-left: -12000px;
+            width: 100%;
+        }
+    </style>
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+       Remove this if you use the .htaccess -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title></title>
+    <meta name="description" content="">
+    <meta name="author" content="Marcio Aguiar">
+
+    <!--  Mobile viewport optimized: j.mp/bplateviewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- CSS : implied media="all" -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/wow_book.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/lightbox.min.css">
+</link>
+<script rel="text/javascript" src="lightbox-plus-jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/preview.css">
+    <!-- Uncomment if you are specifically targeting less enabled mobile browsers
+	<link rel="stylesheet" media="handheld" href="css/handheld.css?v=2">  -->
+
+    <link href='//fonts.googleapis.com/css?family=News+Cycle' rel='stylesheet' type='text/css'>
+    <!-- All JavaScript at the bottom, except for Modernizr which enables HTML5 elements & feature detects -->
+    <script src="js/modernizr-1.6.min.js"></script>
+
+</head>
+
+<body>
+    <div id="container">
+        <nav>
+            <ul>
+                <li><a id='first' href="#" title='goto first page'>First page</a></li>
+                <li><a id='back' href="#" title='go back one page'>Back</a></li>
+                <li><a id='next' href="#" title='go foward one page'>Next</a></li>
+                <li><a id='last' href="#" title='goto last page'>last page</a></li>
+                <li><a id='zoomin' href="#" title='zoom in'>Zoom In</a></li>
+                <li><a id='zoomout' href="#" title='zoom out'>Zoom Out</a></li>
+                <li><a id='slideshow' href="#" title='start slideshow'>Slide Show</a></li>
+                <li><a id='flipsound' href="#" title='flip sound on/off'>Flip sound</a></li>
+                <li><a id='fullscreen' href="#" title='fullscreen on/off'>Fullscreen</a></li>
+                <li><a id='thumbs' href="#" title='thumbnails on/off'>Thumbs</a></li>
+            </ul>
+        </nav>
+        <div id="main">
+            <img id='click_to_open' src="images/click_to_open.png" alt='click to open' />
+            <div id='features'>
+                <div id='cover'>
+                </div>
+
+                <div class='feature pagefx hardpage'>
+                    <p class='subtitle'>Shiven</p>
+                    <h1>Biography</h1>
+                    <p>I Shiven Kaushal a website developer and designer. I started my Journey of programming in class 7
+                        with the help of Akanksha ma'am.
+                    </p>
+                    <p> Nice for a book cover, but you can make any page in the book like that.
+                    </p>
+                    <br /><br />
+                </div>
+                <div class='feature pagefx softpage'>
+                    <p class='subtitle'>Shiven</p>
+                    <div class="gallery">
+                        <h1>Certification</h1>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                    </div>
+                </div>
+
+
+                <div class='thumbnails feature'>
+                    <p class='subtitle'>Shiven</p>
+                    <h1>Projects</h1>
+                    <p>Basic support for displaying thumbnails.</p>
+                    <h2>CSS Sprite thumbnails:</h2>
+                    <p>You need to create a CSS Sprite and define a thumbnail size.</p>
+                    <p>They are lighter and faster, but need to rebuild the image whenever you change the page contents
+                        and/or the thumbnails size.</p>
+                    <h2>Automatic thumbnails:</h2>
+                    <p>
+                        Automatically created, each thumbnail is a clone of the page that is scaled down to the
+                        thumbnail size. They are more resource intensive than sprites thumbnails, but easier to update.
+                        Some browsers don't do the "scale down" part very well, leading to less than optimal (i.e.,
+                        ugly) results.
+                    </p>
+                </div>
+                <div class='thumbnails feature'>
+                    <div style='padding-left: 1em'>
+                        <h2>Change Type:</h2>
+                        <div id='thumbs_type'>
+                            <button id='thumb_automatic'>Automatic</button>
+                            <button id='thumb_sprite'>CSS Sprites</button>
+                        </div>
+                        <h2>Change Size:</h2>
+                        <p>Only valid with automatic thumbnails.</p>
+                        <div id='thumbs_size'>
+                            <button>Bigger</button>
+                            <button>Smaller</button>
+                        </div>
+                        <h2>Change position:</h2>
+                        <div id='thumbs_position'>
+                            <button>Top</button><br />
+                            <button>Left</button>
+                            <button>Right</button>
+                            <button>Bottom</button><br /><br />
+                            <button data-customized='true' style='width: auto'>Customized with CSS</button>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class='deeplinking feature'>
+                    <div class="gallery">
+                        <p class='subtitle'>Shiven</p>
+                        <h1>Gallery</h1>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                    </div>
+                </div>
+                <div class='deeplinking feature'>
+                    <div class="gallery">
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                        <a href="img/aart.jpg" data-lightbox="mygallery"><img src="img/aart.jpg"></a>
+                    </div>
+                </div>
+                <div class='responsive feature'>
+                    <div class='subtitle'>Shiven</div>
+                    
+                    <h1>Contact me</h1>
+                    <div class="col-md-6 contact-info">
+                        <div class="follow">
+                            <p class="banana"><i class="material-icons">location_on</i>modi mill road,MandiGobingarh ,punjab
+                            </p>
+                        </div>
+                        <div class="follow">
+                            <p class="apple"><i class="material-icons">phone</i>+91 9815502545</p>
+                        </div>
+                        <div class="follow">
+                            <p class="apple"><i class="material-icons">mail</i>Shivenkaushal39@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class='feature  wowbook-basic-page flash-demo'>
+                    <div class="box"> <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3426.413060245869!2d75.55387581461284!3d30.819090088517594!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x391a7873b43231c9%3A0xe42e2905c6bf8817!2sCT%20University!5e0!3m2!1sen!2sin!4v1618398749739!5m2!1sen!2sin" 
+                        width="300" height="300" style="border:0;" allowfullscreen="fullscreen" loading="lazy"></iframe>
+                </div>
+                </div>
+
+
+                <div class='feature more'>
+                    <h1>Follow Me</h1>
+                </div>
+                <div class='feature more'>
+                    <ul>
+                        <li><img src="./images/folloe.png" style="margin-top: 9%;margin-right: -4%;width: 110%;"></li>
+                        <li><a href="https://github.com/Shivenkaushal" target="_blank">
+                                <img src="./images/github.png"
+                                    style="margin-left: 20%;margin-top: 9%;width: 23%;">
+                            </a></li>
+                    </ul>
+                </div>
+                <div class='last_cover'>
+                    <img src="images/cover_last.png" width="100%" height="100%" />
+                </div>
+
+            </div> <!-- features -->
+
+        </div>
+        <div id='thumbs_holder'>
+        </div>
+        <footer>
+
+        </footer>
+    </div>
+    <!--! end of #container -->
+    </div>
+
+    <!-- Javascript at the bottom for fast page loading -->
+
+    <!-- Grab Google CDN's jQuery. fall back to local if necessary -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>!window.jQuery && document.write(unescape('%3Cscript src="./js/libs/jquery-1.9.1.min.js"%3E%3C/script%3E'))</script>
+
+    <script type="text/javascript" src="wow_book.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('#features').wowBook({
+                height: 500
+                , width: 800
+                , centeredWhenClosed: true
+                , hardcovers: true
+                , turnPageDuration: 1000
+                , numberedPages: [1, -2]
+                , controls: {
+                    zoomIn: '#zoomin',
+                    zoomOut: '#zoomout',
+                    next: '#next',
+                    back: '#back',
+                    first: '#first',
+                    last: '#last',
+                    slideShow: '#slideshow',
+                    flipSound: '#flipsound',
+                    thumbnails: '#thumbs',
+                    fullscreen: '#fullscreen'
+                }
+                , scaleToFit: "#container"
+                , thumbnailsPosition: 'bottom'
+                , onFullscreenError: function () {
+                    var msg = "Fullscreen failed.";
+                    if (self != top) msg = "The frame is blocking full screen mode. Click on 'remove frame' button above and try to go full screen again."
+                    alert(msg);
+                }
+            }).css({ 'display': 'none', 'margin': 'auto' }).fadeIn(1000);
+
+            $("#cover").click(function () {
+                $.wowBook("#features").advance();
+            });
+
+            var book = $.wowBook("#features");
+
+            function rebuildThumbnails() {
+                book.destroyThumbnails()
+                book.showThumbnails()
+                $("#thumbs_holder").css("marginTop", -$("#thumbs_holder").height() / 2)
+            }
+            $("#thumbs_position button").on("click", function () {
+                var position = $(this).text().toLowerCase()
+                if ($(this).data("customized")) {
+                    position = "top"
+                    book.opts.thumbnailsParent = "#thumbs_holder";
+                } else {
+                    book.opts.thumbnailsParent = "body";
+                }
+                book.opts.thumbnailsPosition = position
+                rebuildThumbnails();
+            })
+            $("#thumb_automatic").click(function () {
+                book.opts.thumbnailsSprite = null
+                book.opts.thumbnailWidth = null
+                rebuildThumbnails();
+            })
+            $("#thumb_sprite").click(function () {
+                book.opts.thumbnailsSprite = "images/thumbs.jpg"
+                book.opts.thumbnailWidth = 136
+                rebuildThumbnails();
+            })
+            $("#thumbs_size button").click(function () {
+                var factor = 0.02 * ($(this).index() ? -1 : 1);
+                book.opts.thumbnailScale = book.opts.thumbnailScale + factor;
+                rebuildThumbnails();
+            })
+
+        });
+    </script>
+
+    <!-- scripts concatenated and minified via ant build script-->
+    <script src="js/plugins.js"></script>
+    <script src="js/script.js"></script>
+    <!-- end concatenated and minified scripts-->
+
+    <!--[if lt IE 7 ]>
+<script src="js/dd_belatedpng.js"></script>
+<script> DD_belatedPNG.fix('img, .png_bg'); //fix any <img> or .png_bg background-images </script>
+<![endif]-->
+
+</body>
+
+</html>
